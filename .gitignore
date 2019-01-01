@@ -113,3 +113,10 @@ fabric.properties
 *.exe 
 *.out 
 *.app
+
+# vscode
+.vscode
+.vscode/*
+
+# .bin files
+*.bin
