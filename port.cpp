@@ -1,15 +1,18 @@
 
 #include "port.h"
 
+
 Port::Port(uint16_t portnumber)
 {
     this->portnumber = portnumber;
 }
 
-
 Port::~Port()
 {
 }
+
+
+
 
 
 Port8Bit::Port8Bit(uint16_t portnumber)
@@ -33,6 +36,8 @@ uint8_t Port8Bit::Read()
 
 
 
+
+
 Port8BitSlow::Port8BitSlow(uint16_t portnumber)
     : Port8Bit(portnumber)
 {
@@ -48,6 +53,9 @@ void Port8BitSlow::Write(uint8_t data)
 }
 
 
+
+
+
 Port16Bit::Port16Bit(uint16_t portnumber)
     : Port(portnumber)
 {
@@ -56,7 +64,6 @@ Port16Bit::Port16Bit(uint16_t portnumber)
 Port16Bit::~Port16Bit()
 {
 }
-
 
 void Port16Bit::Write(uint16_t data)
 {
@@ -67,6 +74,9 @@ uint16_t Port16Bit::Read()
 {
     return Read16(portnumber);
 }
+
+
+
 
 
 Port32Bit::Port32Bit(uint16_t portnumber)
@@ -87,6 +97,4 @@ uint32_t Port32Bit::Read()
 {
     return Read32(portnumber);
 }
-
-
 
